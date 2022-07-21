@@ -1,7 +1,8 @@
-import { Grommet, Box, Header, Select, Menu, Text, Tabs, Tab, Accordion, AccordionPanel, CheckBox, Video } from 'grommet';
+import { Grommet, Box, Header, Select, Menu, Text, Tabs, Tab, Accordion, AccordionPanel } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { Monitor, User, Logout } from 'grommet-icons';
 import { VideoPlayer } from '../components/VideoPlayer';
+import { CameraCheckBox } from '../components/CameraCheckBox';
 
 function HomePage() {
   return (
@@ -23,25 +24,25 @@ function HomePage() {
                   <Accordion>
                     <AccordionPanel label='IPC Proxy 1'>
                       <Box margin='small' gap='xsmall'>
-                        <CheckBox checked label='192.168.100.10' />
-                        <CheckBox label='192.168.100.11' />
-                        <CheckBox label='192.168.100.12' />
+                        <CameraCheckBox key={0} checked label='192.168.100.10' />
+                        <CameraCheckBox key={1} label='192.168.100.11' />
+                        <CameraCheckBox key={2} label='192.168.100.12' />
                       </Box>
                     </AccordionPanel>
                     <AccordionPanel label='IPC Proxy 2'>
                       <Box margin='small' gap='xsmall'>
-                        <CheckBox checked label='192.168.200.10' />
-                        <CheckBox label='192.168.200.11' />
-                        <CheckBox label='192.168.200.12' />
+                        <CameraCheckBox key={0} checked label='192.168.200.10' />
+                        <CameraCheckBox key={1} label='192.168.200.11' />
+                        <CameraCheckBox key={2} label='192.168.200.12' />
                       </Box>
                     </AccordionPanel>
                   </Accordion>
                 </Box>
                 <Box flex wrap overflow='auto' direction='row' alignContent='start'>
-                  <VideoPlayer />
-                  <VideoPlayer />
-                  <VideoPlayer />
-                  <VideoPlayer />
+                  <VideoPlayer key={0} />
+                  <VideoPlayer key={1} />
+                  <VideoPlayer key={2} />
+                  <VideoPlayer key={3} />
                 </Box>
               </Box>
             </Tab>
