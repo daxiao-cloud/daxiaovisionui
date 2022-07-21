@@ -35,4 +35,5 @@ MyDocument.getInitialProps = async (ctx) => {
     sheet.seal();
   }
 }
+
 export default MyDocument;
