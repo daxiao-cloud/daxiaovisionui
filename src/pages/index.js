@@ -1,6 +1,6 @@
 import { Grommet, Box, Header, Select, Menu, Text, Tabs, Tab, Accordion, AccordionPanel, CheckBox, Video } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { Monitor } from 'grommet-icons';
+import { Monitor, User, Logout } from 'grommet-icons';
 import { VideoPlayer } from '../components/VideoPlayer';
 
 function HomePage() {
@@ -12,8 +12,8 @@ function HomePage() {
             <Monitor size='large' />
             <Text size='large'>大晓视觉SaaS平台</Text>
           </Box>
-          <Select options={['简体中文', '英文']} value='简体中文' />
-          <Menu label='用户' items={[ {label: '退出登录'} ]} />
+          <Select options={['简体中文', 'English']} value='简体中文' />
+          <Menu label={<User />} items={[ {label: '退出登录', icon: <Logout />, gap: 'small'} ]} />
         </Header>
         <Box flex>
           <Tabs flex>
