@@ -1,5 +1,5 @@
 import { Box, Tabs, Tab } from 'grommet';
-import { Sidebar } from './Sidebar';
+import { SidebarWindow } from './SidebarWindow';
 import { VideoWindow } from './VideoWindow';
 
 export function MainWindow() {
@@ -7,7 +7,7 @@ export function MainWindow() {
     <Tabs flex>
       <Tab title='视图1'>
         <Box direction='row' border='between' gap='small' fill>
-          <Sidebar />
+          <SidebarWindow />
           <VideoWindow />
         </Box>
       </Tab>

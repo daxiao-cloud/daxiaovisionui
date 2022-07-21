@@ -1,9 +1,9 @@
-import { Box, Accordion, AccordionPanel } from 'grommet';
+import { Box, Accordion, AccordionPanel, Sidebar } from 'grommet';
 import { CameraCheckBox } from './CameraCheckBox';
 
-export function Sidebar() {
+export function SidebarWindow() {
   return (
-    <Box width='medium'>
+    <Sidebar width='medium'>
       <Accordion>
         <AccordionPanel label='IPC Proxy 1'>
           <Box margin='small' gap='xsmall'>
@@ -25,6 +25,6 @@ export function Sidebar() {
           <CameraCheckBox key={2} label='厨房' />
         </Box>
       </Accordion>
-    </Box>
+    </Sidebar>
   );
 }
