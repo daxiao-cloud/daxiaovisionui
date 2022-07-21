@@ -19,9 +19,11 @@ export function Sidebar() {
             <CameraCheckBox key={2} label='192.168.200.12' />
           </Box>
         </AccordionPanel>
-        <CameraCheckBox key={0} checked label='客厅' />
-        <CameraCheckBox key={1} label='走廊' />
-        <CameraCheckBox key={2} label='厨房' />
+        <Box margin='small' gap='xsmall'>
+          <CameraCheckBox key={0} label='客厅' />
+          <CameraCheckBox key={1} label='走廊' />
+          <CameraCheckBox key={2} label='厨房' />
+        </Box>
       </Accordion>
     </Box>
   );
