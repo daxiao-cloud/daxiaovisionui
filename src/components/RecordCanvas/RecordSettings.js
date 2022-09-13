@@ -2,7 +2,7 @@ import { Box, Form, Heading, FormField, TextInput, RadioButtonGroup } from 'grom
 
 export function RecordSettings() {
   return (
-    <Box direction='row' gap='xxsmall' margin='small' fill>
+    <Box direction='row' gap='xxsmall' pad='small' fill>
       <Form>
         <Heading>录像设置</Heading>
         <FormField label='录像存放路径'>
