@@ -1,7 +1,7 @@
 import { Box, Accordion, AccordionPanel, Sidebar } from 'grommet';
 import { CameraCheckBox } from './CameraCheckBox';
 
-export function SidebarWindow() {
+export function VideoSidebarWindow() {
   return (
     <Sidebar width='medium'>
       <Accordion>
