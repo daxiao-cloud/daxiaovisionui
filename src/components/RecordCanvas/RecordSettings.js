@@ -11,6 +11,9 @@ export function RecordSettings() {
         <FormField label='录像文件编码'>
           <RadioButtonGroup options={['H.264', 'VP8', 'VP9']} />
         </FormField>
+        <FormField label='录像文件扩展名'>
+          <RadioButtonGroup options={['.mp4', '.mkv']} />
+        </FormField>
       </Form>
     </Box>
   );
