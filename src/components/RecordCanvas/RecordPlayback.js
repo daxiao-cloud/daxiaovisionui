@@ -1,5 +1,4 @@
 import { Box } from 'grommet';
-import { Sidebar } from '../Sidebar';
 
 export function RecordPlayback() {
   return (
