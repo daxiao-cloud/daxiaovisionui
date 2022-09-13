@@ -1,11 +1,10 @@
 import { Box } from 'grommet';
 import { Sidebar } from '../Sidebar';
 
-export function RecordCanvas() {
+export function RecordPlayback() {
   return (
     <Box direction='row' gap='xxsmall' border='between' fill>
-      <Sidebar />
-      <Box>录像</Box>
+      <Box>录像回放</Box>
     </Box>
   );
 }

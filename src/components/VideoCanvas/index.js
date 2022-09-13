@@ -1,12 +1,17 @@
-import { Box } from 'grommet';
-import { VideoMainWindow } from './VideoMainWindow';
-import { Sidebar } from '../Sidebar';
+import { Box, Tabs, Tab } from 'grommet';
+import { VideoSidebarWindow } from './VideoSidebarWindow';
+import { VideoWindow } from './VideoWindow';
 
 export function VideoCanvas() {
   return (
-    <Box direction='row' gap='xxsmall' border='between' fill>
-      <Sidebar />
-      <VideoMainWindow />
-    </Box>
+    <Tabs flex>
+      <Tab title='视图1'>
+        <Box direction='row' border='between' gap='small' fill>
+          <VideoSidebarWindow />
+          <VideoWindow />
+        </Box>
+      </Tab>
+      <Tab title='视图2'></Tab>
+    </Tabs>
   );
 }

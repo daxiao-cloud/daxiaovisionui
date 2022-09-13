@@ -1,4 +1,4 @@
-import { RecordCanvas } from '../components/RecordCanvas';
+import { RecordPlayback } from '../components/RecordCanvas/RecordPlayback';
 import { makePage } from '../hoc/makePage';
 
-export default () => makePage(<RecordCanvas />);
+export default () => makePage(<RecordPlayback />);
