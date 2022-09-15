@@ -10,7 +10,7 @@ export function VideoCanvas() {
     <Tabs flex>
       <Tab title='视图1'>
         <Box direction='row' border='between' gap='medium' fill>
-          <VideoSidebarWindow onClickCameraSetting={() => setValue(!value)} />
+          <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
           <VideoWindow />
           {value && <Layer
             position='right'
@@ -19,7 +19,7 @@ export function VideoCanvas() {
             modal
             onClickOutside={() => setValue(false)}
             onEsc={() => setValue(false)}>
-              <CameraSettings />
+              <CameraSettings name={value} />
             </Layer>}
         </Box>
       </Tab>

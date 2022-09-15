@@ -41,7 +41,7 @@ export function IpSetting() {
   );
 }
 
-export function CameraSettings() {
+function NewCameraSetting() {
   return (
     <Box width='medium' pad='small'>
       <Form>
@@ -66,5 +66,29 @@ export function CameraSettings() {
         <Button primary type='submit' label='提交' margin='small' />
       </Form>
     </Box>
+  );
+}
+
+function OldCameraSetting() {
+  return (
+    <Box width='medium' pad='small'>
+      <Form>
+        <Heading>摄像机设置</Heading>
+        <FormField label='用户名'>
+          <TextInput />
+        </FormField>
+        <FormField label='密码'>
+          <TextInput />
+        </FormField>
+        <Button primary type='submit' label='提交' margin='small' />
+      </Form>
+    </Box>
+  );
+}
+
+export function CameraSettings({ name }) {
+  console.log(name, name.includes('.'))
+  return (
+    name.includes('.') ? <OldCameraSetting /> : <NewCameraSetting />
   );
 }
