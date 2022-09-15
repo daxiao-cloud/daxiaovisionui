@@ -1,15 +1,18 @@
 import { Box, Anchor, Accordion, AccordionPanel } from 'grommet';
-import { CirclePlay, DocumentVideo, Configure } from 'grommet-icons';
+import { CirclePlay, DocumentVideo, Configure, SettingsOption } from 'grommet-icons';
 import Link from 'next/link';
 
 export function Sidebar() {
   return (
-    <Box pad='small'>
+    <Box pad='small' width='medium'>
       <Accordion>
-        <AccordionPanel label='实时视频流'>
-          <Box pad='small'>
+        <AccordionPanel label='摄像机'>
+          <Box pad='small' gap='small'>
             <Link href='/'>
               <Anchor icon={<CirclePlay />} label='实时视频流' />
+            </Link>
+            <Link href='/camerasettings'>
+              <Anchor icon={<SettingsOption />} label='摄像机设置' />
             </Link>
           </Box>
         </AccordionPanel>
