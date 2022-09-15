@@ -1,4 +1,4 @@
-import { Box, Form, Heading, FormField, Button, RadioButtonGroup, TextInput, Accordion, AccordionPanel, Select } from 'grommet';
+import { Box, Form, FormField, Button, RadioButtonGroup, TextInput, Accordion, AccordionPanel, Select } from 'grommet';
 import { useState } from 'react';
 
 export function BitrateSetting() {
@@ -43,46 +43,40 @@ export function IpSetting() {
 
 function NewCameraSetting() {
   return (
-    <Box width='medium' pad='small'>
-      <Form>
-        <Heading>摄像机设置</Heading>
-        <Accordion>
-          <AccordionPanel label='视频设置'>
-            <FormField label='分辨率'>
-              <RadioButtonGroup options={['4K(3840x2160)', '1080p(1920x1080)', '720p(1280x720)']} />
-            </FormField>
-            <FormField label='帧率'>
-              <RadioButtonGroup options={['25fps', '30fps', '50fps', '60fps']} />
-            </FormField>
-            <FormField label='编码'>
-              <RadioButtonGroup options={['H.264', 'H.265']} />
-            </FormField>
-            <BitrateSetting />
-          </AccordionPanel>
-          <AccordionPanel label='网络设置'>
-            <IpSetting />
-          </AccordionPanel>
-        </Accordion>
-        <Button primary type='submit' label='提交' margin='small' />
-      </Form>
-    </Box>
+    <Form>
+      <Accordion>
+        <AccordionPanel label='视频设置'>
+          <FormField label='分辨率'>
+            <RadioButtonGroup options={['4K(3840x2160)', '1080p(1920x1080)', '720p(1280x720)']} />
+          </FormField>
+          <FormField label='帧率'>
+            <RadioButtonGroup options={['25fps', '30fps', '50fps', '60fps']} />
+          </FormField>
+          <FormField label='编码'>
+            <RadioButtonGroup options={['H.264', 'H.265']} />
+          </FormField>
+          <BitrateSetting />
+        </AccordionPanel>
+        <AccordionPanel label='网络设置'>
+          <IpSetting />
+        </AccordionPanel>
+      </Accordion>
+      <Button primary type='submit' label='提交' margin='small' />
+    </Form>
   );
 }
 
 function OldCameraSetting() {
   return (
-    <Box width='medium' pad='small'>
-      <Form>
-        <Heading>摄像机设置</Heading>
-        <FormField label='用户名'>
-          <TextInput />
-        </FormField>
-        <FormField label='密码'>
-          <TextInput />
-        </FormField>
-        <Button primary type='submit' label='提交' margin='small' />
-      </Form>
-    </Box>
+    <Form>
+      <FormField label='用户名'>
+        <TextInput />
+      </FormField>
+      <FormField label='密码'>
+        <TextInput />
+      </FormField>
+      <Button primary type='submit' label='提交' margin='small' />
+    </Form>
   );
 }
 

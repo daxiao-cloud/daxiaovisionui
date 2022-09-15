@@ -2,7 +2,7 @@ import { Box, Tabs, Tab, Layer } from 'grommet';
 import { useState } from 'react';
 import { VideoSidebarWindow } from './VideoSidebarWindow';
 import { VideoWindow } from './VideoWindow';
-import { CameraSettings } from './CameraSettings';
+import { CameraProperty } from './CameraProperty';
 
 export function VideoCanvas() {
   const [value, setValue] = useState(false);
@@ -19,7 +19,9 @@ export function VideoCanvas() {
             modal
             onClickOutside={() => setValue(false)}
             onEsc={() => setValue(false)}>
-              <CameraSettings name={value} />
+              <Box width='medium' pad='small'>
+                <CameraProperty name={value} />
+              </Box>
             </Layer>}
         </Box>
       </Tab>
