@@ -49,7 +49,7 @@ export function CameraSettings() {
         <Accordion>
           <AccordionPanel label='视频设置'>
             <FormField label='分辨率'>
-              <RadioButtonGroup options={['4K', '1080p', '720p']} />
+              <RadioButtonGroup options={['4K(3840x2160)', '1080p(1920x1080)', '720p(1280x720)']} />
             </FormField>
             <FormField label='帧率'>
               <RadioButtonGroup options={['25fps', '30fps', '50fps', '60fps']} />
