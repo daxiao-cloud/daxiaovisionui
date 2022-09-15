@@ -6,7 +6,7 @@ export function VideoCanvas() {
   return (
     <Tabs flex>
       <Tab title='视图1'>
-        <Box direction='row' border='between' gap='small' fill>
+        <Box direction='row' border='between' gap='medium' fill>
           <VideoSidebarWindow />
           <VideoWindow />
         </Box>
