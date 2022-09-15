@@ -1,8 +1,14 @@
-import { Box, CheckBox, Text } from 'grommet';
-import { Video } from 'grommet-icons';
+import { CheckBox, Button } from 'grommet';
+import { Video, Webcam } from 'grommet-icons';
 
-export function CameraCheckBox({ checked, label }) {
+export function CameraCheckBox({ isNew, checked, label }) {
   return (
-    <CheckBox checked={checked} label={<Box direction='row' gap='small' align='center'><Video /><Text>{label}</Text></Box>} />
+    <CheckBox checked={checked} label={<Button plain label={label} icon={isNew ? <Webcam /> : <Video />} />} />
+  );
+}
+
+export function NewCameraCheckBox({ checked, label }) {
+  return (
+    <CheckBox checked={checked} label={<Button plain label={label} icon={<Webcam />} />} />
   );
 }
