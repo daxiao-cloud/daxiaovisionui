@@ -1,7 +1,10 @@
-import { Box, Accordion, AccordionPanel, Sidebar } from 'grommet';
+import { Box, Accordion, AccordionPanel, Sidebar, List, Button } from 'grommet';
+import { SettingsOption } from 'grommet-icons';
 import { CameraCheckBox } from './CameraCheckBox';
 
-export function VideoSidebarWindow() {
+const data = ['客厅', '走廊', '厨房'];
+
+export function VideoSidebarWindow({ onClickCameraSetting }) {
   return (
     <Sidebar width='medium'>
       <Accordion>
@@ -20,9 +23,9 @@ export function VideoSidebarWindow() {
           </Box>
         </AccordionPanel>
         <Box margin='small' gap='xsmall'>
-          <CameraCheckBox key={0} label='客厅' />
-          <CameraCheckBox key={1} label='走廊' />
-          <CameraCheckBox key={2} label='厨房' />
+          <List data={data} action={() => <Button plain icon={<SettingsOption />} onClick={onClickCameraSetting} />}>
+            {datum => <CameraCheckBox label={datum} />}
+          </List>
         </Box>
       </Accordion>
     </Sidebar>

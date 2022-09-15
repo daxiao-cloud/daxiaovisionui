@@ -11,9 +11,6 @@ export function Sidebar() {
             <Link href='/'>
               <Anchor icon={<CirclePlay />} label='实时视频流' />
             </Link>
-            <Link href='/camerasettings'>
-              <Anchor icon={<SettingsOption />} label='摄像机设置' />
-            </Link>
           </Box>
         </AccordionPanel>
         <AccordionPanel label='录像'>
