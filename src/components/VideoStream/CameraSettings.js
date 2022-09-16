@@ -41,7 +41,7 @@ export function IpSetting() {
   );
 }
 
-function NewCameraSetting() {
+export function NewCameraSettings() {
   return (
     <Form>
       <Accordion>
@@ -66,7 +66,7 @@ function NewCameraSetting() {
   );
 }
 
-function OldCameraSetting() {
+export function OldCameraSettings() {
   return (
     <Form>
       <FormField label='用户名'>
@@ -77,12 +77,5 @@ function OldCameraSetting() {
       </FormField>
       <Button primary type='submit' label='提交' margin='small' />
     </Form>
-  );
-}
-
-export function CameraSettings({ name }) {
-  console.log(name, name.includes('.'))
-  return (
-    name.includes('.') ? <OldCameraSetting /> : <NewCameraSetting />
   );
 }

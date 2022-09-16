@@ -13,7 +13,7 @@ import {
   TableRow,
   TableCell,
 } from "grommet";
-import { CameraSettings } from "./CameraSettings";
+import { OldCameraSettings, NewCameraSettings } from "./CameraSettings";
 
 function CameraName() {
   return (
@@ -79,12 +79,20 @@ function CameraInfo() {
           <LeftCell>MAC地址</LeftCell>
           <TableCell>6c:f1:7e:9f:83:a2</TableCell>
         </TableRow>
+        <TableRow>
+          <LeftCell>版本号</LeftCell>
+          <TableCell>1.0.3.15</TableCell>
+        </TableRow>
+        <TableRow>
+          <LeftCell>已开机</LeftCell>
+          <TableCell>158:12:05</TableCell>
+        </TableRow>
       </TableBody>
     </Table>
   );
 }
 
-export function CameraProperty({ name }) {
+function NewCameraProperty({ name }) {
   return (
     <Tabs>
       <Tab title="信息">
@@ -94,8 +102,29 @@ export function CameraProperty({ name }) {
         <CameraName />
       </Tab>
       <Tab title="设置">
-        <CameraSettings name={name} />
+        <NewCameraSettings name={name} />
       </Tab>
     </Tabs>
   );
+}
+
+function OldCameraProperty({ name }) {
+  return (
+    <Tabs>
+      <Tab title="信息">
+        <CameraInfo />
+      </Tab>
+      <Tab title="名称">
+        <CameraName />
+      </Tab>
+      <Tab title="设置">
+        <OldCameraSettings name={name} />
+      </Tab>
+    </Tabs>
+  );
+}
+
+export function CameraProperty({ name }) {
+  console.log(name, name.includes('.'))
+  return (name.includes('.') ? <OldCameraProperty /> : <NewCameraProperty />);
 }
