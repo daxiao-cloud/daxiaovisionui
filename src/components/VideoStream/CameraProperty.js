@@ -1,5 +1,5 @@
 import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from 'grommet';
-import { Copy } from 'grommet-icons';
+import { Configure, Info, Upgrade, Tag } from 'grommet-icons';
 import { OldCameraSettings, NewCameraSettings } from './CameraSettings';
 import { CameraOta } from './CameraOta';
 
@@ -22,9 +22,8 @@ function CameraInfo() {
       <Text>型号</Text>
       <Text>金乌1号</Text>
       <Text>统一SN</Text>
-      <Box direction='row' align='center'>
-        <Text truncate>daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT</Text>
-        <Button icon={<Copy />} />
+      <Box width='small'>
+        <Text wordBreak='break-all'>daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT</Text>
       </Box>
       <Text>设备SN</Text>
       <Text>SDP37481934</Text>
@@ -46,17 +45,25 @@ function CameraInfo() {
 function NewCameraProperty() {
   return (
     <Tabs>
-      <Tab title='信息'>
-        <CameraInfo />
+      <Tab title='信息' icon={<Info />}>
+        <Box margin={{ top: 'small' }}>
+          <CameraInfo />
+        </Box>
       </Tab>
-      <Tab title='名称'>
-        <CameraName />
+      <Tab title='名称' icon={<Tag />}>
+        <Box margin={{ top: 'small' }}>
+          <CameraName />
+        </Box>
       </Tab>
-      <Tab title='设置'>
-        <NewCameraSettings />
+      <Tab title='设置' icon={<Configure />}>
+        <Box margin={{ top: 'small' }}>
+          <NewCameraSettings />
+        </Box>
       </Tab>
-      <Tab title='升级'>
-        <CameraOta />
+      <Tab title='升级' icon={<Upgrade />}>
+        <Box margin={{ top: 'small' }}>
+          <CameraOta />
+        </Box>
       </Tab>
     </Tabs>
   );
@@ -64,27 +71,33 @@ function NewCameraProperty() {
 
 function OldCameraInfo() {
   return (
-    <Grid columns={['auto', 'auto']} gap='small'>
+    <Grid columns={['auto', 'auto']} gap='small' align='center'>
       <Text>制造商</Text>
       <Text>宇视科技</Text>
       <Text>型号</Text>
       <Text>IPC2A5I-IR6-AUPF40-B-DT</Text>
+      <Text>IP地址</Text>
+      <Text>192.168.100.127</Text>
     </Grid>
   );
 }
 function OldCameraProperty() {
   return (
     <Tabs>
-      <Tab title='信息'>
-        <OldCameraInfo />
+      <Tab title='信息' icon={<Info />}>
+        <Box margin={{ top: 'small' }}>
+          <OldCameraInfo />
+        </Box>
       </Tab>
-      <Tab title='设置'>
-        <OldCameraSettings />
+      <Tab title='设置' icon={<Configure />}>
+        <Box margin={{ top: 'small' }}>
+          <OldCameraSettings />
+        </Box>
       </Tab>
     </Tabs>
   );
 }
 
 export function CameraProperty({ name }) {
-  return (name.includes('.') ? <OldCameraProperty /> : <NewCameraProperty />);
+  return name.includes('.') ? <OldCameraProperty /> : <NewCameraProperty />;
 }

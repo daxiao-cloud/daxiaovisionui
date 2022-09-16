@@ -1,5 +1,5 @@
 import { Box, Anchor, Accordion, AccordionPanel } from 'grommet';
-import { CirclePlay, DocumentVideo, Configure } from 'grommet-icons';
+import { CirclePlay, DocumentVideo } from 'grommet-icons';
 import Link from 'next/link';
 
 export function Sidebar() {

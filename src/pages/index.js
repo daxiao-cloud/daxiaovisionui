@@ -1,4 +1,4 @@
-import { VideoCanvas } from '../components/VideoStream';
+import { VideoStream } from '../components/VideoStream';
 import { makePage } from '../hoc/makePage';
 
-export default () => makePage(<VideoCanvas />);
+export default () => makePage(<VideoStream />);
