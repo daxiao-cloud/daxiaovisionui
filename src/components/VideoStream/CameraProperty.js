@@ -1,4 +1,4 @@
-import { Tabs, Tab, Form, FormField, Button, TextInput, Table, TableBody, TableRow, TableCell, } from "grommet";
+import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from "grommet";
 import { OldCameraSettings, NewCameraSettings } from "./CameraSettings";
 
 function CameraName() {
@@ -12,69 +12,29 @@ function CameraName() {
   );
 }
 
-const LeftCell = ({ children }) => (
-  <TableCell
-    plain
-    style={{
-      width: "80px",
-    }}
-  >
-    {children}
-  </TableCell>
-);
-
 function CameraInfo() {
   return (
-    <Table style={{ width: "100%", tableLayout: "fixed" }}>
-      <TableBody>
-        <TableRow>
-          <LeftCell>制造商</LeftCell>
-          <TableCell>大晓智能</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>型号</LeftCell>
-          <TableCell>金乌1号</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>统一SN</LeftCell>
-          <TableCell
-            style={{
-              display: "block",
-              width: "100%",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-            }}
-          >
-            daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>设备SN</LeftCell>
-          <TableCell>SDP37481934</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>IPv4地址</LeftCell>
-          <TableCell>192.168.100.127</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>IPv6地址</LeftCell>
-          <TableCell>fe80::64a6:2309:8880:7903</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>MAC地址</LeftCell>
-          <TableCell>6c:f1:7e:9f:83:a2</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>版本号</LeftCell>
-          <TableCell>1.0.3.15</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>已开机</LeftCell>
-          <TableCell>158:12:05</TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+    <Grid columns={['auto', 'auto']} gap='small'>
+      <Text>制造商</Text>
+      <Text>大晓智能</Text>
+      <Text>型号</Text>
+      <Text>金乌1号</Text>
+      <Text>统一SN</Text>
+      <Text truncate='tip'>daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT</Text>
+      <Text>设备SN</Text>
+      <Text>SDP37481934</Text>
+      <Text>IP地址</Text>
+      <Box>
+        <Text>192.168.100.127</Text>
+        <Text>fe80::64a6:2309:8880:7903</Text>
+      </Box>
+      <Text>MAC地址</Text>
+      <Text>6c:f1:7e:9f:83:a2</Text>
+      <Text>版本号</Text>
+      <Text>1.0.3.15</Text>
+      <Text>已开机</Text>
+      <Text>158:12:05</Text>
+    </Grid>
   );
 }
 
@@ -96,18 +56,12 @@ function NewCameraProperty({ name }) {
 
 function OldCameraInfo() {
   return (
-    <Table style={{ width: "100%", tableLayout: "fixed" }}>
-      <TableBody>
-        <TableRow>
-          <LeftCell>制造商</LeftCell>
-          <TableCell>宇视科技</TableCell>
-        </TableRow>
-        <TableRow>
-          <LeftCell>型号</LeftCell>
-          <TableCell>IPC2A5I-IR6-AUPF40-B-DT</TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+    <Grid columns={['auto', 'auto']} gap='small'>
+      <Text>制造商</Text>
+      <Text>宇视科技</Text>
+      <Text>型号</Text>
+      <Text>IPC2A5I-IR6-AUPF40-B-DT</Text>
+    </Grid>
   );
 }
 function OldCameraProperty({ name }) {
