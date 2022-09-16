@@ -1,26 +1,30 @@
-import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from "grommet";
-import { OldCameraSettings, NewCameraSettings } from "./CameraSettings";
+import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from 'grommet';
+import { Copy } from 'grommet-icons';
+import { OldCameraSettings, NewCameraSettings } from './CameraSettings';
 
 function CameraName() {
   return (
     <Form>
-      <FormField label="摄像机名称">
+      <FormField label='摄像机名称'>
         <TextInput />
       </FormField>
-      <Button primary type="submit" label="提交" margin="small" />
+      <Button primary type='submit' label='提交' margin='small' />
     </Form>
   );
 }
 
 function CameraInfo() {
   return (
-    <Grid columns={['auto', 'auto']} gap='small'>
+    <Grid columns={['auto', 'auto']} gap='small' align='center'>
       <Text>制造商</Text>
       <Text>大晓智能</Text>
       <Text>型号</Text>
       <Text>金乌1号</Text>
       <Text>统一SN</Text>
-      <Text truncate='tip'>daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT</Text>
+      <Box direction='row' align='center'>
+        <Text truncate>daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT</Text>
+        <Button icon={<Copy />} />
+      </Box>
       <Text>设备SN</Text>
       <Text>SDP37481934</Text>
       <Text>IP地址</Text>
@@ -41,13 +45,13 @@ function CameraInfo() {
 function NewCameraProperty({ name }) {
   return (
     <Tabs>
-      <Tab title="信息">
+      <Tab title='信息'>
         <CameraInfo />
       </Tab>
-      <Tab title="名称">
+      <Tab title='名称'>
         <CameraName />
       </Tab>
-      <Tab title="设置">
+      <Tab title='设置'>
         <NewCameraSettings name={name} />
       </Tab>
     </Tabs>
@@ -67,10 +71,10 @@ function OldCameraInfo() {
 function OldCameraProperty({ name }) {
   return (
     <Tabs>
-      <Tab title="信息">
+      <Tab title='信息'>
         <OldCameraInfo />
       </Tab>
-      <Tab title="设置">
+      <Tab title='设置'>
         <OldCameraSettings name={name} />
       </Tab>
     </Tabs>
