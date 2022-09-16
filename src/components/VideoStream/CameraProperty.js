@@ -1,15 +1,4 @@
-import {
-  Tabs,
-  Tab,
-  Form,
-  FormField,
-  Button,
-  TextInput,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "grommet";
+import { Tabs, Tab, Form, FormField, Button, TextInput, Table, TableBody, TableRow, TableCell, } from "grommet";
 import { OldCameraSettings, NewCameraSettings } from "./CameraSettings";
 
 function CameraName() {
