@@ -1,4 +1,4 @@
-import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from 'grommet';
+import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box, Heading } from 'grommet';
 import { Configure, Info, Upgrade, Tag } from 'grommet-icons';
 import { OldCameraSettings, NewCameraSettings } from './CameraSettings';
 import { CameraOta } from './CameraOta';
@@ -44,28 +44,31 @@ function CameraInfo() {
 
 function NewCameraProperty() {
   return (
-    <Tabs>
-      <Tab title='信息' icon={<Info />}>
-        <Box margin={{ top: 'small' }}>
-          <CameraInfo />
-        </Box>
-      </Tab>
-      <Tab title='名称' icon={<Tag />}>
-        <Box margin={{ top: 'small' }}>
-          <CameraName />
-        </Box>
-      </Tab>
-      <Tab title='设置' icon={<Configure />}>
-        <Box margin={{ top: 'small' }}>
-          <NewCameraSettings />
-        </Box>
-      </Tab>
-      <Tab title='升级' icon={<Upgrade />}>
-        <Box margin={{ top: 'small' }}>
-          <CameraOta />
-        </Box>
-      </Tab>
-    </Tabs>
+    <>
+      <Heading>摄像机详情</Heading>
+      <Tabs>
+        <Tab title='信息' icon={<Info />}>
+          <Box margin={{ top: 'small' }}>
+            <CameraInfo />
+          </Box>
+        </Tab>
+        <Tab title='名称' icon={<Tag />}>
+          <Box margin={{ top: 'small' }}>
+            <CameraName />
+          </Box>
+        </Tab>
+        <Tab title='设置' icon={<Configure />}>
+          <Box margin={{ top: 'small' }}>
+            <NewCameraSettings />
+          </Box>
+        </Tab>
+        <Tab title='升级' icon={<Upgrade />}>
+          <Box margin={{ top: 'small' }}>
+            <CameraOta />
+          </Box>
+        </Tab>
+      </Tabs>
+    </>
   );
 }
 
@@ -83,18 +86,21 @@ function OldCameraInfo() {
 }
 function OldCameraProperty() {
   return (
-    <Tabs>
-      <Tab title='信息' icon={<Info />}>
-        <Box margin={{ top: 'small' }}>
-          <OldCameraInfo />
-        </Box>
-      </Tab>
-      <Tab title='设置' icon={<Configure />}>
-        <Box margin={{ top: 'small' }}>
-          <OldCameraSettings />
-        </Box>
-      </Tab>
-    </Tabs>
+    <>
+      <Heading>摄像机详情</Heading>
+      <Tabs>
+        <Tab title='信息' icon={<Info />}>
+          <Box margin={{ top: 'small' }}>
+            <OldCameraInfo />
+          </Box>
+        </Tab>
+        <Tab title='设置' icon={<Configure />}>
+          <Box margin={{ top: 'small' }}>
+            <OldCameraSettings />
+          </Box>
+        </Tab>
+      </Tabs>
+    </>
   );
 }
 
