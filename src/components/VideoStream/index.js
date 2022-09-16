@@ -24,7 +24,21 @@ export function VideoStream() {
             </Layer>}
         </Box>
       </Tab>
-      <Tab title='视图2' icon={<Monitor />}></Tab>
+      <Tab title='视图2' icon={<Monitor />}>
+        <Box direction='row' border='between' gap='medium' fill>
+          <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
+          {/* <VideoWindow /> */}
+          {value && <Layer
+            position='right'
+            full='vertical'
+            onClickOutside={() => setValue(false)}
+            onEsc={() => setValue(false)}>
+              <Box pad='small' width={{ min: 'medium' }}>
+                <CameraProperty name={value} />
+              </Box>
+            </Layer>}
+        </Box>
+      </Tab>
     </Tabs>
   );
 }

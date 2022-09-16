@@ -1,4 +1,4 @@
-import { Box, Header, Select, Menu, Text, DropButton, Button } from 'grommet';
+import { Box, Header, Select, Menu, DropButton, Button } from 'grommet';
 import { Desktop, User, Logout, Menu as MenuIcon } from 'grommet-icons';
 import Link from 'next/link';
 import { Sidebar } from './Sidebar';
