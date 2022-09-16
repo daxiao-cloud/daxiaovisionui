@@ -14,7 +14,7 @@ function CameraName() {
 
 const LeftCell = ({ children }) => (
   <TableCell
-    plain={true}
+    plain
     style={{
       width: "80px",
     }}
