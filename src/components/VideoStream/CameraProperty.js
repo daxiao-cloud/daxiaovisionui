@@ -1,6 +1,7 @@
 import { Tabs, Tab, Form, FormField, Button, TextInput, Grid, Text, Box } from 'grommet';
 import { Copy } from 'grommet-icons';
 import { OldCameraSettings, NewCameraSettings } from './CameraSettings';
+import { CameraOta } from './CameraOta';
 
 function CameraName() {
   return (
@@ -42,7 +43,7 @@ function CameraInfo() {
   );
 }
 
-function NewCameraProperty({ name }) {
+function NewCameraProperty() {
   return (
     <Tabs>
       <Tab title='信息'>
@@ -52,7 +53,10 @@ function NewCameraProperty({ name }) {
         <CameraName />
       </Tab>
       <Tab title='设置'>
-        <NewCameraSettings name={name} />
+        <NewCameraSettings />
+      </Tab>
+      <Tab title='升级'>
+        <CameraOta />
       </Tab>
     </Tabs>
   );
@@ -68,14 +72,14 @@ function OldCameraInfo() {
     </Grid>
   );
 }
-function OldCameraProperty({ name }) {
+function OldCameraProperty() {
   return (
     <Tabs>
       <Tab title='信息'>
         <OldCameraInfo />
       </Tab>
       <Tab title='设置'>
-        <OldCameraSettings name={name} />
+        <OldCameraSettings />
       </Tab>
     </Tabs>
   );
