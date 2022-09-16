@@ -7,7 +7,7 @@ export function BitrateSetting() {
   return (
     <FormField label='码率'>
       <RadioButtonGroup options={options} value={value} onChange={(event) => setValue(event.target.value)} />
-      {value === '定码率' && <TextInput placeholder='128 ~ 163840 kbps' />}
+      {value === '定码率' && <TextInput placeholder='128 ~ 131072 kbps' />}
     </FormField>
   );
 }
