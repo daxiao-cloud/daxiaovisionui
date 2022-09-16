@@ -108,14 +108,27 @@ function NewCameraProperty({ name }) {
   );
 }
 
+function OldCameraInfo() {
+  return (
+    <Table style={{ width: "100%", tableLayout: "fixed" }}>
+      <TableBody>
+        <TableRow>
+          <LeftCell>制造商</LeftCell>
+          <TableCell>宇视科技</TableCell>
+        </TableRow>
+        <TableRow>
+          <LeftCell>型号</LeftCell>
+          <TableCell>IPC2A5I-IR6-AUPF40-B-DT</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  );
+}
 function OldCameraProperty({ name }) {
   return (
     <Tabs>
       <Tab title="信息">
-        <CameraInfo />
-      </Tab>
-      <Tab title="名称">
-        <CameraName />
+        <OldCameraInfo />
       </Tab>
       <Tab title="设置">
         <OldCameraSettings name={name} />
@@ -125,6 +138,5 @@ function OldCameraProperty({ name }) {
 }
 
 export function CameraProperty({ name }) {
-  console.log(name, name.includes('.'))
   return (name.includes('.') ? <OldCameraProperty /> : <NewCameraProperty />);
 }
