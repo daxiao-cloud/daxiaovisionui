@@ -1,12 +1,9 @@
 import {
   Tabs,
   Tab,
-  Box,
   Form,
-  Heading,
   FormField,
   Button,
-  Text,
   TextInput,
   Table,
   TableBody,

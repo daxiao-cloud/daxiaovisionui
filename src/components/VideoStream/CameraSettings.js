@@ -1,4 +1,4 @@
-import { Box, Form, FormField, Button, RadioButtonGroup, TextInput, Accordion, AccordionPanel, Select } from 'grommet';
+import { Form, FormField, Button, RadioButtonGroup, TextInput, Accordion, AccordionPanel, Select } from 'grommet';
 import { useState } from 'react';
 
 export function BitrateSetting() {

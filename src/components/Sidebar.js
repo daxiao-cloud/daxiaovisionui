@@ -1,5 +1,5 @@
 import { Box, Anchor, Accordion, AccordionPanel } from 'grommet';
-import { CirclePlay, DocumentVideo, Configure, SettingsOption } from 'grommet-icons';
+import { CirclePlay, DocumentVideo, Configure } from 'grommet-icons';
 import Link from 'next/link';
 
 export function Sidebar() {
@@ -15,11 +15,8 @@ export function Sidebar() {
         </AccordionPanel>
         <AccordionPanel label='录像'>
           <Box pad='small' gap='small'>
-            <Link href='/record'>
-              <Anchor icon={<DocumentVideo />} label='录像回放' />
-            </Link>
-            <Link href='/recordsettings'>
-              <Anchor icon={<Configure />} label='录像设置' />
+            <Link href='/recordmanagement'>
+              <Anchor icon={<DocumentVideo />} label='录像管理' />
             </Link>
           </Box>
         </AccordionPanel>
