@@ -1,8 +1,9 @@
 import { Box, Stack, Button, Video } from 'grommet';
 import { Expand, Camera, ZoomIn, VolumeMute, Microphone, Close } from 'grommet-icons';
+import { makeTip } from '../../hoc/makeTip';
 
 function IconButton({ content, icon }) {
-  return <Button plain tip={content} icon={icon} />;
+  return <Button plain tip={makeTip(content)} icon={icon} />;
 }
 
 export function VideoPlayer() {

@@ -2,12 +2,13 @@ import { Box, Header, Select, Menu, DropButton, Button } from 'grommet';
 import { Desktop, User, Logout, Menu as MenuIcon } from 'grommet-icons';
 import Link from 'next/link';
 import { Sidebar } from './Sidebar';
+import { makeTip } from '../hoc/makeTip';
 
 export function HeaderBar() {
   return (
     <Header background='brand'>
       <Box direction='row' gap='small' align='center' border='between'>
-        <DropButton margin='small' icon={<MenuIcon />} dropContent={<Sidebar />} dropProps={{ align: { top: 'bottom', left: 'left' } }} />
+        <DropButton tip={makeTip('基本功能')} margin='small' icon={<MenuIcon />} dropContent={<Sidebar />} dropProps={{ align: { top: 'bottom', left: 'left' } }} />
         <Link href='/'>
           <Button plain icon={<Desktop />} label='大晓视觉SaaS平台' margin='small' />
         </Link>
