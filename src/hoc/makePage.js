@@ -5,7 +5,7 @@ import { HeaderBar } from '../components/HeaderBar';
 export function makePage(mainWindow) {
   return (
     <Grommet full theme={grommet}>
-      <Box fill>
+      <Box fill width={{ min: 'xlarge' }}>
         <HeaderBar />
         {mainWindow}
       </Box>

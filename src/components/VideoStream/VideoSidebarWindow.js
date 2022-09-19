@@ -17,7 +17,7 @@ function CameraList({ isNew, data, onClickCameraSetting }) {
 
 export function VideoSidebarWindow({ onClickCameraSetting }) {
   return (
-    <Sidebar width='medium'>
+    <Sidebar width='medium' border='right'>
       <Accordion>
         <AccordionPanel label='IPC Proxy 1'>
           <CameraList data={data1} onClickCameraSetting={onClickCameraSetting} />
