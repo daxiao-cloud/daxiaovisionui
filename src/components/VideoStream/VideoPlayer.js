@@ -6,21 +6,20 @@ function IconButton({ content, icon }) {
   return <Button plain tip={makeTip(content)} icon={icon} />;
 }
 
-export function VideoPlayer() {
+export function VideoPlayer({ ...prop }) {
   return (
-    <Box width='640px' height='480px' background={'dark-6'}>
-      <Stack fill anchor='bottom'>
+    <Stack anchor='bottom' fill {...prop}>
+      <Box fill background='dark-6'>
         <Video controls={false} />
-        <Box round={{ corner: 'top', size: 'small' }} direction='row' pad='small' gap='medium' background='#000000A1'>
-          <IconButton key={0} content='抓图' icon={<Camera color='brand' />} />
-          <IconButton key={1} content='放大' icon={<ZoomIn color='brand' />} />
-          <IconButton key={2} content='扬声器静音' icon={<VolumeMute color='brand' />} />
-          <IconButton key={3} content='开始通话' icon={<Microphone color='brand' />} />
-          <IconButton key={4} content='全屏' icon={<Expand color='brand' />} />
-          <IconButton key={5} content='关闭' icon={<Close color='brand' />} />
-        </Box>
-      </Stack>
-    </Box>
-    
+      </Box>
+      <Box round={{ corner: 'top', size: 'small' }} direction='row' pad='small' gap='medium' background='dark-1'>
+        <IconButton key={0} content='抓图' icon={<Camera />} />
+        <IconButton key={1} content='放大' icon={<ZoomIn />} />
+        <IconButton key={2} content='扬声器静音' icon={<VolumeMute />} />
+        <IconButton key={3} content='开始通话' icon={<Microphone />} />
+        <IconButton key={4} content='全屏' icon={<Expand />} />
+        <IconButton key={5} content='关闭' icon={<Close />} />
+      </Box>
+    </Stack>
   );
 }
