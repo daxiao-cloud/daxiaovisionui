@@ -18,8 +18,8 @@ const data2 = [
 
 function CameraList({ isNew, data, onClickCameraSetting }) {
   return (
-    <List data={data} border={false} action={(item) => <Button disabled={item.disabled} plain tip={makeTip('设置')} icon={<SettingsOption />} onClick={() => onClickCameraSetting(item.label)} />}>
-      {datum => <CameraCheckBox disabled={datum.disabled} isNew={isNew} label={datum.label} />}
+    <List data={data} border={false} itemKey='label' action={(item) => <Button disabled={item.disabled} key={item.label} plain tip={makeTip('设置')} icon={<SettingsOption />} onClick={() => onClickCameraSetting(item.label)} />}>
+      {datum => <CameraCheckBox disabled={datum.disabled} isNew={isNew} label={datum.label} key={datum.label} />}
     </List>
   );
 }

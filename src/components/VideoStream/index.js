@@ -10,9 +10,9 @@ export function VideoStream() {
   return (
     <Tabs flex>
       <Tab title='视图1' icon={<Monitor />}>
-        <Box direction='row' border='between' fill>
+        <Box direction='row' fill>
           <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
-          <VideoWindow />
+          <VideoWindow number={6} />
           {value && <Layer
             position='right'
             full='vertical'
@@ -25,7 +25,7 @@ export function VideoStream() {
         </Box>
       </Tab>
       <Tab title='视图2' icon={<Monitor />}>
-        <Box direction='row' border='between' gap='medium' fill>
+        <Box direction='row' gap='medium' fill>
           <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
           {/* <VideoWindow /> */}
           {value && <Layer
