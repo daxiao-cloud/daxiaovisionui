@@ -13,7 +13,7 @@ export function RecordSettings() {
       <FormField label='录像文件扩展名'>
         <RadioButtonGroup options={['.mp4', '.mkv']} value='.mp4' />
       </FormField>
-      <Button primary type='submit' label='提交' />
+      <Button primary type='submit' label='保存' />
     </Form>
   );
 }

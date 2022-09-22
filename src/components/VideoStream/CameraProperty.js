@@ -9,7 +9,7 @@ function CameraName() {
       <FormField label='摄像机名称'>
         <TextInput />
       </FormField>
-      <Button primary type='submit' label='提交' margin='small' />
+      <Button primary type='submit' label='保存' margin='small' />
     </Form>
   );
 }

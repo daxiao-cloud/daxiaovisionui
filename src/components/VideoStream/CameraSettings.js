@@ -61,7 +61,7 @@ export function NewCameraSettings() {
           <IpSetting />
         </AccordionPanel>
       </Accordion>
-      <Button primary type='submit' label='提交' margin='small' />
+      <Button primary type='submit' label='保存' margin='small' />
     </Form>
   );
 }
@@ -75,7 +75,7 @@ export function OldCameraSettings() {
       <FormField label='密码'>
         <TextInput />
       </FormField>
-      <Button primary type='submit' label='提交' margin='small' />
+      <Button primary type='submit' label='保存' margin='small' />
     </Form>
   );
 }
