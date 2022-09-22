@@ -12,7 +12,7 @@ export function VideoStream() {
       <Tab title='视图1' icon={<Monitor />}>
         <Box direction='row' fill>
           <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
-          <VideoWindow number={6} />
+          <VideoWindow number={12} />
           {value && <Layer
             position='right'
             full='vertical'
@@ -25,9 +25,9 @@ export function VideoStream() {
         </Box>
       </Tab>
       <Tab title='视图2' icon={<Monitor />}>
-        <Box direction='row' gap='medium' fill>
+        <Box direction='row' fill>
           <VideoSidebarWindow onClickCameraSetting={(name) => setValue(name)} />
-          {/* <VideoWindow /> */}
+          <VideoWindow number={4} />
           {value && <Layer
             position='right'
             full='vertical'
