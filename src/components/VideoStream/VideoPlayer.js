@@ -1,16 +1,23 @@
 import { Box, Button, Video, Stack } from 'grommet';
-import { Expand, Camera, ZoomIn, VolumeMute, Microphone, Close } from 'grommet-icons';
+import { Expand, Camera, ZoomIn, VolumeMute, Microphone, Close, Shift } from 'grommet-icons';
+import { useState } from 'react';
 import { makeTip } from '../../hoc/makeTip';
 
-function IconButton({ content, icon }) {
-  return <Button plain tip={makeTip(content)} icon={icon} />;
+function IconButton({ content, icon, ...prop }) {
+  return <Button plain tip={makeTip(content)} icon={icon} {...prop} />;
 }
 
+const BigViewPort = { gridColumn: 'span 2', gridRow: 'span 2' };
+
 export function VideoPlayer({ ...prop }) {
+  const [style, setStyle] = useState();
+  function toggleViewPort() {
+    style ? setStyle(undefined) : setStyle(BigViewPort);
+  }
   return (
-    <Box fill background='dark-6' {...prop}>
-      <Stack fill>
-        <Video fill controls={false} />
+    <Box fill background='dark-6' {...prop} style={style}>
+      <Stack fill interactiveChild='last'>
+        <Video controls={false} />
         <Stack anchor='bottom' fill>
           <Box fill />
           <Box round={{ corner: 'top', size: 'small' }} direction='row' pad='small' gap='medium' background='dark-1'>
@@ -25,6 +32,12 @@ export function VideoPlayer({ ...prop }) {
           <Box fill />
           <Box pad='small' gap='medium' background='dark-1'>
             <IconButton key={5} content='关闭' icon={<Close />} />
+          </Box>
+        </Stack>
+        <Stack anchor='top' fill>
+          <Box fill />
+          <Box pad='small' gap='medium' background='dark-1'>
+            <IconButton content='窗口放大' icon={<Shift />} onClick={() => toggleViewPort()} />
           </Box>
         </Stack>
       </Stack>
