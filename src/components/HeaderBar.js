@@ -17,7 +17,6 @@ export function HeaderBar() {
           </Link>
         </Box>
         <Select options={['简体中文', 'English']} value='简体中文' />
-        
         <Menu label={<User />} items={[
           {label: '二维码', icon: <Qr />, gap: 'small', onClick: () => setShowQRCode(!showQRCode)},
           {label: '退出登录', icon: <Logout />, gap: 'small'},
